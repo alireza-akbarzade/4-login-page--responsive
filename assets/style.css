@@ -23,7 +23,8 @@
     position: relative;
     float: right;
 }
-.right-info{
+
+.right-info {
     width: 350px;
     height: auto;
     min-height: 200px;
@@ -31,23 +32,27 @@
     top: 50%;
     left: 50%;
     margin: auto;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-h2{
+
+h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
-p{
+
+p {
     font-size: 14px;
     color: #666;
     margin-bottom: 15px;
 }
-label{
-font-size: 14px;
-display: block;
-margin: 1px 0 5px;
+
+label {
+    font-size: 14px;
+    display: block;
+    margin: 1px 0 5px;
 }
-input{
+
+input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -63,7 +68,8 @@ input{
     text-align: right;
     margin: 5px 0 20px;
 }
-.btn{
+
+.btn {
     width: 100%;
     padding: 12px;
     background-color: black;
@@ -74,15 +80,18 @@ input{
     cursor: pointer;
 }
 
-.or-text{
+.or-text {
     font-size: 14px;
     text-align: center;
     margin: 15px 0;
 }
-.social-buttons{
+
+.social-buttons {
     margin: 20px 0;
 }
-.social-buttons button ,.signup-text{
+
+.social-buttons button,
+.signup-text {
     width: 100%;
     padding: 12px;
     border: 0;
@@ -94,32 +103,34 @@ input{
     display: block;
     line-height: 1.5;
     text-align: center;
-     
+
 }
-.social-buttons button img{
+
+.social-buttons button img {
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
 }
 
-.signup-text a{
+.signup-text a {
     font-size: 12px;
-   
+
     color: blue;
     text-align: right;
     margin: 5px 5px 20px;
 }
-    
-.span-sm{
+
+.span-sm {
     display: none;
 }
 
 .left {
-   width: 50%;
-   height: 100%;
-   float: left;
+    width: 50%;
+    height: 100%;
+    float: left;
 }
-.left img{
+
+.left img {
     width: 80%;
     height: 95%;
     border-radius: 12px;
@@ -127,4 +138,65 @@ input{
     margin: auto;
     object-fit: cover;
 }
-/* responsive
+
+/* responsive */
+@media (max-width:768px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto auto;
+        height:auto;
+        padding: 20px;
+        overflow: hidden;
+        
+    }
+
+    .right,
+    .left {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    .right {
+        order: 1;
+    }
+
+    .right-info {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        text-align: right;
+    }
+
+    .social-buttons {
+        display: flex;
+    }
+
+    .social-buttons button {
+        margin: 10px 5px;
+    }
+
+    .social-buttons .span {
+        display: none;
+    }
+
+    .social-buttons .span-sm {
+        display: inline-block;
+    }
+
+    .left {
+        margin: 10px 0;
+        position: relative;
+        order: -1;
+    }
+    .left img{
+        width: 100%;
+        max-height: 120px;
+        object-fit: cover;
+        
+    }
+}
